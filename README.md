@@ -1,17 +1,22 @@
 # Vergen
 
-Generates version numbers for use with web service development.
+Generates version numbers automatically based of calendar dates and tags. This makes it suitable to for use in a 
+continuous delivery or deployment context where a person manually generating version numbers is either unlikely or not
+useful.
 
 # Usage
 
-## Release Version `vergen release`
+# Latest Version `vergen latest`
 
-A release version is of the form `YY.MM.DD-$Revision` where `$Revision >= 0`. The date component is always computed from 
-UTC. The purpose of `$Revision` is so in a given day multiple releases can occur with unique version numbers. In theory 
-`$Revision` could be any integer such as seconds since midnight, however, in practice this program use an integer 
-computed off the current number of release tags for the current date.
+Examines the current tags on the Git repository and returns the latest tagged version.
 
-## Preview Version `vergen preview`
+# Next Version `vergen next`
+
+Examines the current tags on the Git repository and returns the next version.
+
+# Preview Version `vergen preview`
+
+Creates a preview version
 
 A preview version has the form `$CommitID.$Branch.$Authority[-$Revision]`. The `$Revision` in Preview Version is 
 optional and useful in cases where a nested resource needs a unique version. For example, if you are using `vergen` to
@@ -24,4 +29,3 @@ that would result in a unique version.
 | CommitID  | The Git SHA in long format |
 | Branch    | The Git branch name with non-alphanum chars converted to `-` |
 | Authority | The person or system that generated the version |
-
