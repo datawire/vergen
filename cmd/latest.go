@@ -24,6 +24,14 @@ func init() {
 	cmd.Flags().StringVar(&prefix, "prefix", "release/", "A prefix the comes before the version")
 }
 
+func getCurrentReleaseVersion(tags []string) string {
+	if len(tags) > 0 {
+		return tags[len(tags)-1]
+	} else {
+		return ""
+	}
+}
+
 func getCurrentVersion(cmd *cobra.Command, args []string) {
 	repo := GetRepo()
 	tags := GetTagNames(repo, prefix)
