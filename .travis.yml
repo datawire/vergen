@@ -1,0 +1,9 @@
+---
+language: generic
+
+services:
+  - docker
+
+script:
+  - make clean
+  - make build.image

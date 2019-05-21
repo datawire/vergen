@@ -1,7 +1,9 @@
 package main
 
-import "github.com/plombardi89/vergen/cmd"
+import (
+	"github.com/plombardi89/vergen/cmd/vergen"
+)
 
 func main() {
-	cmd.Execute()
+	vergen.Execute()
 }

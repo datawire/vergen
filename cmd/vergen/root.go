@@ -1,4 +1,4 @@
-package cmd
+package vergen
 
 import (
 	"fmt"
@@ -13,14 +13,19 @@ var RootCmd = &cobra.Command{
 
 var prefix string
 
+func init() {
+	RootCmd.AddCommand(createPreviewCommand())
+	RootCmd.AddCommand(createReleaseVersionCommand())
+	RootCmd.AddCommand(createGetLatestVersion())
+}
+
 func Execute() {
 	if err := RootCmd.Execute(); err != nil {
-		fmt.Println(err)
-		os.Exit(1)
+		checkIfError(err)
 	}
 }
 
-func CheckIfError(err error) {
+func checkIfError(err error) {
 	if err == nil {
 		return
 	}
