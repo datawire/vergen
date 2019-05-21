@@ -1,4 +1,4 @@
-module github.com/plombardi89/vergen
+module github.com/datawire/vergen
 
 require (
 	github.com/emirpasic/gods v1.12.0 // indirect

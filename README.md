@@ -29,3 +29,7 @@ that would result in a unique version.
 | CommitID  | The Git SHA in long format |
 | Branch    | The Git branch name with non-alphanum chars converted to `-` |
 | Authority | The person or system that generated the version |
+
+# License
+
+Licensed under Apache 2.0. Please read [LICENSE](LICENSE) for complete details.

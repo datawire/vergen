@@ -2,7 +2,7 @@ package vergen
 
 import (
 	"fmt"
-	"github.com/plombardi89/vergen/pkg/vergen"
+	"github.com/datawire/vergen/pkg/vergen"
 	"github.com/spf13/cobra"
 )
 
