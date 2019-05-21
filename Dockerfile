@@ -8,7 +8,8 @@ RUN go mod download
 FROM foundation as builder
 ENV CGO_ENABLED=0
 COPY . .
-RUN go build -a -tags netgo -ldflags '-s -w "-extldflags=-static"' -o bin/vergen
+RUN go test -v ./... \
+    && go build -a -tags netgo -ldflags '-s -w "-extldflags=-static"' -o bin/vergen
 
 FROM gcr.io/distroless/base as runtime
 

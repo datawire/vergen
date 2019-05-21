@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/plombardi89/vergen/cmd/vergen"
+	"github.com/datawire/vergen/cmd/vergen"
 )
 
 func main() {
