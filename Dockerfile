@@ -15,4 +15,5 @@ FROM gcr.io/distroless/base as runtime
 
 COPY --from=builder /build/bin/vergen /bin/vergen
 
+WORKDIR /project
 ENTRYPOINT ["/bin/vergen"]

@@ -27,5 +27,5 @@ func nextReleaseVersion(cmd *cobra.Command, args []string) {
 	version, err := generator.NextReleaseVersion()
 	checkIfError(err)
 
-	fmt.Println(version.String())
+	fmt.Printf(version.String())
 }

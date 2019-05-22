@@ -33,5 +33,5 @@ func createPreviewVersion(command *cobra.Command, args []string) {
 	version, err := generator.PreviewVersion(branch, authority, appendRevision)
 	checkIfError(err)
 
-	fmt.Println(version.String())
+	fmt.Printf(version.String())
 }

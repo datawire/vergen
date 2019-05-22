@@ -30,5 +30,5 @@ func getCurrentVersion(cmd *cobra.Command, args []string) {
 	current, err := generator.LatestReleaseVersion(fallback)
 	checkIfError(err)
 
-	fmt.Println(current)
+	fmt.Printf(current)
 }
